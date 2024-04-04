@@ -7,7 +7,7 @@ export default function Search() {
 				<FiSearch />
 			</div>
 			<input
-				className='pl-10 bg-[#F1F1F1] w-[18em] md:w-[39em] p-2 border border-black rounded-3xl placeholder-black placeholder-opacity-100'
+				className='pl-10 bg-light-gray-dimata w-[18em] md:w-[39em] p-2 border border-dark-gray-dimata text-black-dimata  rounded-3xl placeholder-dark-gray-dimata placeholder-opacity-100'
 				placeholder='Search'
 			/>
 		</div>
