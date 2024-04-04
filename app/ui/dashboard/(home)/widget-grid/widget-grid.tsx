@@ -1,3 +1,4 @@
+import AddWidget from './components/add-widget';
 import MyProjects from './components/my-projects';
 import MyTasks from './components/my-tasks';
 import PeopleCollaborators from './components/people-collaborators';
@@ -8,6 +9,7 @@ export default async function WidgetGrid() {
 			<MyTasks />
 			<MyProjects />
 			<PeopleCollaborators />
+			<AddWidget />
 		</div>
 	);
 }

@@ -1,4 +1,3 @@
-import Profile from '../../../navbar/components/profile';
 import CreateProjectButton from './create-project-button';
 
 export default function MyProjects() {
