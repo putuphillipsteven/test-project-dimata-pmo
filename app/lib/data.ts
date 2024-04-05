@@ -2,6 +2,17 @@ import { Tasks } from './definition';
 
 import axios, { AxiosInstance } from 'axios';
 
+const taskStatus = [
+	'DRAFT',
+	'TOBEAPPROVED',
+	'APPROVED',
+	'INPROGRESS',
+	'FINISHED',
+	'CLOSED',
+	'CANCEL',
+	'VOID',
+];
+
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_API_ROUTE || '',
 	headers: {

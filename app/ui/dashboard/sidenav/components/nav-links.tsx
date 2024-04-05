@@ -21,7 +21,7 @@ const links = [
 export default function NavLinks() {
 	const pathname = usePathname();
 	return (
-		<>
+		<div className='flex flex-col items-start border-b border-dark-gray-dimata w-full py-4'>
 			{links.map((link) => {
 				const LinkIcon = link.icon;
 				return (
@@ -40,6 +40,6 @@ export default function NavLinks() {
 					</Link>
 				);
 			})}
-		</>
+		</div>
 	);
 }

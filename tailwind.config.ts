@@ -18,6 +18,7 @@ const config: Config = {
 				'dark-gray-dimata': '#707070',
 				'orange-dimata': '#E2992B',
 				'black-dimata': '#303030',
+				'cream-dimata': '#FFF3E1',
 			},
 		},
 	},
