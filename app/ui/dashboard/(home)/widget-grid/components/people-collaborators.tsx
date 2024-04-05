@@ -2,7 +2,7 @@ import Profile from '../../../navbar/components/profile';
 
 export default function PeopleCollaborators() {
 	return (
-		<div className='bg-white rounded-xl w-[30em] h-[14em] overflow-hidden'>
+		<div className='bg-white rounded-xl w-[30em] h-[20em] overflow-hidden'>
 			<div className='flex flex-col justify-between items-start p-4 gap-y-4 h-full'>
 				<div className='flex flex-col gap-y-4'>
 					<div className='flex items-center gap-x-4'>

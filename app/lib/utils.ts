@@ -9,3 +9,8 @@ export const getDateAsString = (): string => {
 	const currentDate: Date = new Date();
 	return currentDate.toLocaleDateString('en-US', options);
 };
+
+export const extractDate = (datetimeString: string) => {
+	// Extract the date portion (YYYY-MM-DD) by taking the substring from index 0 to 9
+	return datetimeString.substring(0, 10);
+};
