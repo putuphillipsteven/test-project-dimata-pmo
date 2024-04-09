@@ -17,11 +17,10 @@ export default function TasksNavButton({
 	destination,
 	pathname,
 }: TaskNavButtonProps): React.ReactElement {
-	console.log(`filterTaskNav`, filter, destination);
 	return (
 		<div
 			className={clsx(
-				'flex items-center gap-x-2 text-dark-gray-dimata pb-2',
+				'flex items-center gap-x-2 pb-2',
 				{
 					'text-black border-b-2 border-dark-gray-dimata': filter === destination,
 				},

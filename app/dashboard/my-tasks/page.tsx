@@ -4,7 +4,7 @@ import { TiStarOutline } from 'react-icons/ti';
 import { MdOutlineCircle } from 'react-icons/md';
 import TaskNav from '@/app/ui/dashboard/my-tasks/component/tasks-nav';
 export default async function Page() {
-	const tasks = await fetchTasks();
+	const tasks = await fetchTasks({ page: 0, size: 10 });
 	return (
 		<div className='flex flex-col gap-y-4'>
 			<div className='flex items-center gap-x-4 p-4'>
