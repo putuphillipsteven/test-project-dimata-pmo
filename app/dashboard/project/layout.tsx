@@ -1,6 +1,5 @@
 import ProjectNav from '@/app/ui/dashboard/(overview)/project-nav';
-import TasksLogo from '@/app/ui/dashboard/my-tasks/component/tasks-logo';
-import TaskNav from '@/app/ui/dashboard/my-tasks/component/tasks-nav';
+import ProjectsLogo from '@/app/ui/dashboard/(overview)/projects-logo';
 import { MdOutlineCircle } from 'react-icons/md';
 import { TiStarOutline } from 'react-icons/ti';
 
@@ -8,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<div className='flex flex-col gap-y-4'>
 			<div className='flex items-center gap-x-4 p-4'>
-				<TasksLogo />
+				<ProjectsLogo />
 				<select className='bg-transparent'>
 					<option>New Project</option>
 				</select>

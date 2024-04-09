@@ -6,7 +6,6 @@ import { RiLayout4Line } from 'react-icons/ri';
 import { IoCalendarOutline } from 'react-icons/io5';
 import { TbLayoutGrid } from 'react-icons/tb';
 import { HiPaperClip } from 'react-icons/hi2';
-import TasksNavButton from '../my-tasks/component/tasks-nav-button';
 import { FaPlus } from 'react-icons/fa6';
 import { usePathname, useRouter } from 'next/navigation';
 import ProjectNavButton from './project-nav-button';
