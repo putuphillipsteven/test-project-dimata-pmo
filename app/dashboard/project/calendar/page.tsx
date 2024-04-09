@@ -1,7 +1,7 @@
 export default function Page() {
 	return (
-		<div>
-			<p>Projects</p>
+		<div className='px-4'>
+			<p>Calendar</p>
 		</div>
 	);
 }
