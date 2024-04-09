@@ -6,8 +6,7 @@ import { usePathname } from 'next/navigation';
 import { RiHome2Line } from 'react-icons/ri';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import { IoNotificationsOutline } from 'react-icons/io5';
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
+
 const links = [
 	{ name: 'Home', href: '/dashboard', icon: RiHome2Line },
 	{
