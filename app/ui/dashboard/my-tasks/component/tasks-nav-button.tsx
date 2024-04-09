@@ -1,15 +1,50 @@
 import React, { ReactNode } from 'react';
+import clsx from 'clsx';
+import Link from 'next/link';
 
 interface TaskNavButtonProps {
 	icon: ReactNode;
 	text: string;
+	filter: string;
+	destination: string;
+	pathname: string;
 }
 
-export default function TasksNavButton({ icon, text }: TaskNavButtonProps): React.ReactElement {
+export default function TasksNavButton({
+	icon,
+	text,
+	filter,
+	destination,
+	pathname,
+}: TaskNavButtonProps): React.ReactElement {
+	console.log(`filterTaskNav`, filter, destination);
 	return (
-		<div className='pb-2 flex items-center gap-x-2 text-dark-gray-dimata'>
+		<div
+			className={clsx(
+				'flex items-center gap-x-2 text-dark-gray-dimata pb-2',
+				{
+					'text-black border-b-2 border-dark-gray-dimata': filter === destination,
+				},
+				{
+					'text-dark-gray-dimata': filter !== destination,
+				},
+			)}
+		>
 			{icon}
-			<p className='text-dark-gray-dimata text-sm'>{text}</p>
+			<Link
+				href={{ pathname: pathname, query: { filter: destination } }}
+				className={clsx(
+					'text-sm',
+					{
+						'text-black': filter === destination,
+					},
+					{
+						'text-dark-gray-dimata': filter !== destination,
+					},
+				)}
+			>
+				{text}
+			</Link>
 		</div>
 	);
 }
