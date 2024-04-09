@@ -3,6 +3,8 @@ import TasksLogo from '@/app/ui/dashboard/my-tasks/component/tasks-logo';
 import { TiStarOutline } from 'react-icons/ti';
 import { MdOutlineCircle } from 'react-icons/md';
 import TaskNav from '@/app/ui/dashboard/my-tasks/component/tasks-nav';
+import AddTaskButton from '@/app/ui/dashboard/my-tasks/component/add-task-button';
+import MyTasksLists from '@/app/ui/dashboard/my-tasks/component/my-tasks-lists';
 export default async function Page() {
 	const tasks = await fetchTasks({ page: 0, size: 10 });
 	return (
@@ -19,6 +21,12 @@ export default async function Page() {
 				</div>
 			</div>
 			<TaskNav />
+			{/* <div className='px-2'>
+				<AddTaskButton />
+			</div>
+			<div className='px-2'>
+				<MyTasksLists />
+			</div> */}
 		</div>
 	);
 }

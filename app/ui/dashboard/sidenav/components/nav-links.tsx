@@ -15,6 +15,7 @@ const links = [
 		icon: FaRegCheckCircle,
 	},
 	{ name: 'Inbox', href: '/dashboard/inbox', icon: IoNotificationsOutline },
+	{ name: 'Project', href: '/dashboard/project', icon: IoNotificationsOutline },
 ];
 
 export default function NavLinks() {
