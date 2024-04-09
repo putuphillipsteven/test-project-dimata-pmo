@@ -1,13 +1,32 @@
+'use client';
+
 import Link from 'next/link';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function MyTaskLinks() {
-	return (
-		<div className='flex gap-x-4 ml-14 text-black-dimata'>
-			<Link href={'/my-tasks/upcoming'} className='border-b-4 border-dark-gray-dimata pb-2'>
-				Upcoming
+	const searchParams = useSearchParams();
+	const pathname = usePathname();
+	const { replace } = useRouter();
+	const params = new URLSearchParams(searchParams);
+
+	useEffect(() => {
+		params.set('my-tasks', 'upcoming');
+		replace(`${pathname}?${params.toString()}`);
+	}, []);
+
+	const linkLists = [
+		{ text: 'Upcoming', destination: 'upcoming' },
+		{ text: 'Overdue', destination: 'overdue' },
+		{ text: 'Completed', destination: 'completed' },
+	];
+
+	const renderedLinkLists = linkLists.map((link) => {
+		return (
+			<Link href={{ pathname: pathname, query: { 'my-tasks': link.destination } }}>
+				{link?.text}
 			</Link>
-			<Link href={'/my-tasks/overdue'}>Overdue</Link>
-			<Link href={'/my-tasks/completed'}>Completed</Link>
-		</div>
-	);
+		);
+	});
+	return <div className='flex gap-x-4 ml-14 text-black-dimata'>{renderedLinkLists}</div>;
 }
