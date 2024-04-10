@@ -1,4 +1,5 @@
 import AddTaskButton from '@/app/ui/dashboard/(overview)/add-task-button';
+import TableList from '@/app/ui/dashboard/(overview)/list/table-list';
 import MyTasksLists from '@/app/ui/dashboard/(overview)/my-tasks-lists';
 
 export default function Page() {
@@ -7,7 +8,7 @@ export default function Page() {
 			<div>
 				<AddTaskButton />
 			</div>
-			<MyTasksLists />
+			<TableList />
 		</div>
 	);
 }
