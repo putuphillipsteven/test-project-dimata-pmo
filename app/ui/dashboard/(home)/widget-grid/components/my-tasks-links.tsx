@@ -2,21 +2,21 @@
 
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import clsx from 'clsx';
 
 export default function MyTaskLinks() {
 	const searchParams = useSearchParams();
 	const pathname = usePathname();
 	const { replace } = useRouter();
-	const params = new URLSearchParams(searchParams);
+	const params = useMemo(() => new URLSearchParams(), []);
 
 	const myTasksParams = params.get('my-tasks');
 
 	useEffect(() => {
 		params.set('my-tasks', 'upcoming');
 		replace(`${pathname}?${params.toString()}`);
-	}, []);
+	}, [params, pathname, replace]);
 
 	const linkLists = [
 		{ text: 'Upcoming', destination: 'upcoming' },
@@ -27,6 +27,7 @@ export default function MyTaskLinks() {
 	const renderedLinkLists = linkLists.map((link) => {
 		return (
 			<Link
+				key={link.text}
 				href={{ pathname: pathname, query: { 'my-tasks': link.destination } }}
 				className={clsx(
 					'',

@@ -20,6 +20,14 @@ const links = [
 
 export default function NavLinks() {
 	const pathname = usePathname();
+
+	const checkLink = (href: string, pathname: string) => {
+		if (href === `/dashboard` && pathname === href) {
+			return `pathname === href`;
+		} else if (href !== `/dashboard` && pathname.includes(href)) {
+			return `pathname.includes(href)`;
+		}
+	};
 	return (
 		<div className='flex flex-col items-start border-b border-dark-gray-dimata w-full py-4'>
 			{links.map((link) => {
@@ -31,7 +39,7 @@ export default function NavLinks() {
 						className={clsx(
 							'flex items-center justify-center gap-2 rounded-md p-2 text-black-dimata md:flex-none',
 							{
-								'font-bold': pathname === link.href,
+								'font-bold': checkLink(link.href, pathname),
 							},
 						)}
 					>

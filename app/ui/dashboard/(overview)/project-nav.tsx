@@ -11,9 +11,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import ProjectNavButton from './project-nav-button';
 export default function ProjectNav() {
 	const pathname = usePathname();
-	console.log(`projectNav`, pathname);
 	const router = useRouter();
-	console.log(`projectNav`, router);
 
 	const projectNavLinks = [
 		{
@@ -55,7 +53,13 @@ export default function ProjectNav() {
 
 	const renderedProjectNavLinks = projectNavLinks.map((link) => {
 		return (
-			<ProjectNavButton icon={link.icon} text={link.text} href={link.href} pathname={pathname} />
+			<ProjectNavButton
+				key={link.text}
+				icon={link.icon}
+				text={link.text}
+				href={link.href}
+				pathname={pathname}
+			/>
 		);
 	});
 	return (
