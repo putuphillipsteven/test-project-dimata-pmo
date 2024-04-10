@@ -21,6 +21,7 @@ const links = [
 export default function NavLinks() {
 	const pathname = usePathname();
 
+	// Check link is not on home or /dashboard
 	const checkLink = (href: string, pathname: string) => {
 		if (href === `/dashboard` && pathname === href) {
 			return `pathname === href`;
