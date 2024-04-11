@@ -71,3 +71,11 @@ interface Task {
 }
 
 export type Tasks = Task[];
+
+export type TaskField = {
+	name: string;
+	assignee: string;
+	dueDate: Date;
+	description: string;
+	priority: string;
+};
