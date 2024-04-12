@@ -20,7 +20,7 @@ export default function CreateTaskForm() {
 						name='name'
 						type='text'
 						placeholder='Enter Task Name'
-						className='w-full rounded-md border border-black-dimata p-1'
+						className='w-full rounded-md border border-black-dimata px-3 py-1 outline-none'
 					/>
 				</div>
 				{/* Assignee */}
@@ -28,13 +28,6 @@ export default function CreateTaskForm() {
 					<label htmlFor='assignee' className=''>
 						Assignee
 					</label>
-					{/* <input
-						id='assignee'
-						name='assignee'
-						type='text'
-						placeholder='Enter Assignee Name'
-						className='w-full rounded-md border border-black-dimata p-1'
-					/> */}
 				</div>
 				{/* Due Date */}
 				<div className='flex flex-col gap-y-2 items-stretch'>
@@ -46,7 +39,7 @@ export default function CreateTaskForm() {
 						name='dueDate'
 						type='date'
 						placeholder='Enter Due Date'
-						className='w-full rounded-md border border-black-dimata p-1'
+						className='w-full rounded-md border border-black-dimata px-3 py-1 outline-none'
 					/>
 				</div>
 				{/* Description Name */}
@@ -58,7 +51,7 @@ export default function CreateTaskForm() {
 						id='description'
 						name='description'
 						placeholder='Enter Description'
-						className='w-full rounded-md border border-black-dimata p-1 h-[134px]'
+						className='w-full rounded-md border border-black-dimata px-3 py-1 h-[134px] outline-none'
 					/>
 				</div>
 				{/* Priority */}
@@ -69,7 +62,7 @@ export default function CreateTaskForm() {
 					<select
 						id='priority'
 						name='priority'
-						className='w-full rounded-md border border-black-dimata p-1'
+						className='w-full rounded-md border border-black-dimata px-3 py-1 outline-none'
 					>
 						<option value='Low'>Low</option>
 						<option value='Medium'>Medium</option>
