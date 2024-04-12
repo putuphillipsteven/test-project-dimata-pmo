@@ -32,9 +32,11 @@ export default function Insights() {
 	const renderedFirstSectionLink = links.map((link) => {
 		const LinkIcon = link.icon;
 		return (
-			<span style={{ cursor: 'not-allowed', textDecoration: 'none', color: 'inherit' }}>
-				<p
-					key={link.name}
+			<span
+				key={link.name}
+				style={{ cursor: 'not-allowed', textDecoration: 'none', color: 'inherit' }}
+			>
+				<button
 					// href={link.href}
 					className={clsx(
 						'flex items-center justify-center gap-x-2 rounded-md p-2 text-black-dimata',
@@ -45,7 +47,7 @@ export default function Insights() {
 				>
 					<LinkIcon className='w-6' />
 					<p className='hidden md:block'>{link.name}</p>
-				</p>
+				</button>
 			</span>
 		);
 	});

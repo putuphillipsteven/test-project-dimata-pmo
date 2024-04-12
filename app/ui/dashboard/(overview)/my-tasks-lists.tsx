@@ -2,8 +2,9 @@ import { fetchTasks } from '@/app/lib/data';
 import { Tasks } from '@/app/lib/definition';
 import { capitalizeFirstLetter, extractDate } from '@/app/lib/utils';
 import capitalize from 'capitalize';
+import clsx from 'clsx';
 
-export default async function MyTasksLists() {
+export default async function MyTasksLists({ display }: { display?: boolean }) {
 	const tasks: Tasks = await fetchTasks({ page: 0, size: 10 });
 	const renderedTasks = tasks.map((task) => {
 		return (
@@ -32,5 +33,5 @@ export default async function MyTasksLists() {
 			</tr>
 		);
 	});
-	return <tbody className='divide-y fake-tbody'>{renderedTasks}</tbody>;
+	return <tbody className={clsx('divide-y fake-tbody')}>{renderedTasks}</tbody>;
 }

@@ -1,5 +1,3 @@
-import { Tasks } from './definition';
-
 import axios, { AxiosInstance } from 'axios';
 
 const taskStatus = [
