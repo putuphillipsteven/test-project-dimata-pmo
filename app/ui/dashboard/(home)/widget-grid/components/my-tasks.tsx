@@ -4,6 +4,7 @@ import CreateTaskButton from './create-task-button';
 import MyTaskLinks from './my-tasks-links';
 import { fetchTasks } from '@/app/lib/data';
 import MyTasksList from './my-tasks-list';
+import { Suspense } from 'react';
 
 export default async function MyTasks() {
 	const tasks = await fetchTasks({ page: 0, size: 5 });
@@ -14,7 +15,9 @@ export default async function MyTasks() {
 					<Profile />
 					<p>My Tasks</p>
 				</div>
-				<MyTaskLinks />
+				<Suspense fallback={<div>Loading...</div>}>
+					<MyTaskLinks />
+				</Suspense>
 			</div>
 			<MyTasksList tasks={tasks} />
 			<CreateTaskButton />
