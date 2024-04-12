@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { BsFillPeopleFill } from 'react-icons/bs';
 import { FaAngleRight } from 'react-icons/fa6';
 export default function Team() {
@@ -9,7 +10,9 @@ export default function Team() {
 			<div className='flex items-center justify-between w-full px-4 '>
 				<div className='flex items-center gap-x-2'>
 					<BsFillPeopleFill className='text-dark-gray-dimata text-2xl' />
-					<p className='text-sm'>My Work Space</p>
+					<span style={{ cursor: 'not-allowed', textDecoration: 'none', color: 'inherit' }}>
+						<p className='text-sm'>My Work Space</p>
+					</span>
 				</div>
 				<FaAngleRight />
 			</div>

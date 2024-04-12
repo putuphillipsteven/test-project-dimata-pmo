@@ -32,19 +32,21 @@ export default function Insights() {
 	const renderedFirstSectionLink = links.map((link) => {
 		const LinkIcon = link.icon;
 		return (
-			<Link
-				key={link.name}
-				href={link.href}
-				className={clsx(
-					'flex items-center justify-center gap-x-2 rounded-md p-2 text-black-dimata',
-					{
-						'font-bold': checkLink(link.href, pathname),
-					},
-				)}
-			>
-				<LinkIcon className='w-6' />
-				<p className='hidden md:block'>{link.name}</p>
-			</Link>
+			<span style={{ cursor: 'not-allowed', textDecoration: 'none', color: 'inherit' }}>
+				<p
+					key={link.name}
+					// href={link.href}
+					className={clsx(
+						'flex items-center justify-center gap-x-2 rounded-md p-2 text-black-dimata',
+						{
+							'font-bold': checkLink(link.href, pathname),
+						},
+					)}
+				>
+					<LinkIcon className='w-6' />
+					<p className='hidden md:block'>{link.name}</p>
+				</p>
+			</span>
 		);
 	});
 	return (
