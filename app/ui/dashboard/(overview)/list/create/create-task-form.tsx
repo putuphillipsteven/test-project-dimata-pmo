@@ -4,6 +4,8 @@ import { TaskField } from '@/app/lib/definition';
 import { useFormState } from 'react-dom';
 import Link from 'next/link';
 import { createTask } from '@/app/lib/action';
+import AssigneeProfile from './assignee-profile';
+import AddAssigneeButton from './add-assignee-button';
 
 export default function CreateTaskForm() {
 	return (
@@ -28,6 +30,10 @@ export default function CreateTaskForm() {
 					<label htmlFor='assignee' className=''>
 						Assignee
 					</label>
+					<div className='flex gap-x-8'>
+						<AssigneeProfile />
+						<AddAssigneeButton />
+					</div>
 				</div>
 				{/* Due Date */}
 				<div className='flex flex-col gap-y-2 items-stretch'>
