@@ -14,6 +14,7 @@ const taskStatus = [
 ];
 
 const token = process.env.NEXT_PUBLIC_API_TOKEN;
+
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: process.env.NEXT_PUBLIC_API_ROUTE || '',
 	headers: {
@@ -35,6 +36,7 @@ export const fetchTasks = async ({ page, size }: FetchTasks) => {
 			params: {
 				page,
 				size,
+				sort: `taskId,desc`,
 			},
 		});
 		return data?.data;

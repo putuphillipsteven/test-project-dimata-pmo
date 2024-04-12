@@ -75,7 +75,7 @@ export type Tasks = Task[];
 export type TaskField = {
 	name: string;
 	assignee: string;
-	dueDate: Date;
+	dueDate: string;
 	description: string;
 	priority: string;
 };
