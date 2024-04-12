@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-
+import { unstable_noStore as noStore } from 'next/cache';
 const taskStatus = [
 	'DRAFT',
 	'TOBEAPPROVED',
@@ -30,6 +30,7 @@ interface FetchTasks {
 
 export const fetchTasks = async ({ page, size }: FetchTasks) => {
 	try {
+		noStore();
 		const data = await axiosInstance.get(`pmo-tasks`, {
 			params: {
 				page,
